@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="700dp"
+    android:viewportWidth="400"
+    android:viewportHeight="700">
+
+    <!-- Night sky background -->
+    <path android:fillColor="#0A1628"
+        android:pathData="M0,0h400v700H0z"/>
+
+    <!-- Stars -->
+    <path android:fillColor="#FFFFFF" android:pathData="M50,40m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M120,25m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M200,15m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M300,35m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M350,20m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M80,80m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M260,60m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0"/>
+
+    <!-- Buildings silhouette left -->
+    <path android:fillColor="#0D2137"
+        android:pathData="M0,320 L0,200 L30,200 L30,180 L50,180 L50,160 L70,160 L70,220 L90,220 L90,190 L110,190 L110,320 Z"/>
+
+    <!-- Buildings silhouette right -->
+    <path android:fillColor="#0D2137"
+        android:pathData="M290,320 L290,195 L310,195 L310,170 L330,170 L330,185 L350,185 L350,165 L370,165 L370,200 L400,200 L400,320 Z"/>
+
+    <!-- Building windows left - lit up -->
+    <path android:fillColor="#FFD700" android:alpha="0.6"
+        android:pathData="M55,170h8v8h-8z"/>
+    <path android:fillColor="#FFD700" android:alpha="0.4"
+        android:pathData="M75,168h8v8h-8z"/>
+    <path android:fillColor="#FFD700" android:alpha="0.7"
+        android:pathData="M95,198h8v8h-8z"/>
+
+    <!-- Building windows right - lit up -->
+    <path android:fillColor="#FFD700" android:alpha="0.5"
+        android:pathData="M315,178h8v8h-8z"/>
+    <path android:fillColor="#FFD700" android:alpha="0.6"
+        android:pathData="M355,172h8v8h-8z"/>
+    <path android:fillColor="#FFD700" android:alpha="0.4"
+        android:pathData="M295,202h8v8h-8z"/>
+
+    <!-- Road surface -->
+    <path android:fillColor="#1A1A1A"
+        android:pathData="M0,320h400v380H0z"/>
+
+    <!-- Road perspective lines -->
+    <path android:fillColor="#2A2A2A"
+        android:pathData="M0,320 L120,700 L0,700 Z"/>
+    <path android:fillColor="#2A2A2A"
+        android:pathData="M400,320 L280,700 L400,700 Z"/>
+
+    <!-- Road center dashed lines -->
+    <path android:fillColor="#FFD700" android:alpha="0.8"
+        android:pathData="M195,340h10v40h-10z"/>
+    <path android:fillColor="#FFD700" android:alpha="0.8"
+        android:pathData="M192,410h16v40h-16z"/>
+    <path android:fillColor="#FFD700" android:alpha="0.8"
+        android:pathData="M188,480h24v40h-24z"/>
+    <path android:fillColor="#FFD700" android:alpha="0.8"
+        android:pathData="M182,555h36v45h-36z"/>
+    <path android:fillColor="#FFD700" android:alpha="0.8"
+        android:pathData="M172,630h56v50h-56z"/>
+
+    <!-- Road side white lines -->
+    <path android:fillColor="#FFFFFF" android:alpha="0.5"
+        android:pathData="M130,320 L60,700 L70,700 L140,320 Z"/>
+    <path android:fillColor="#FFFFFF" android:alpha="0.5"
+        android:pathData="M270,320 L330,700 L340,700 L280,320 Z"/>
+
+    <!-- Streetlight pole left -->
+    <path android:fillColor="#555555"
+        android:pathData="M58,230h5v95h-5z"/>
+    <!-- Streetlight arm left -->
+    <path android:fillColor="#555555"
+        android:pathData="M63,232h30v4h-30z"/>
+    <!-- Streetlight glow left -->
+    <path android:fillColor="#FFD700" android:alpha="0.9"
+        android:pathData="M88,218m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0"/>
+    <path android:fillColor="#FFD700" android:alpha="0.2"
+        android:pathData="M88,218m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0"/>
+
+    <!-- Streetlight pole right -->
+    <path android:fillColor="#555555"
+        android:pathData="M337,230h5v95h-5z"/>
+    <!-- Streetlight arm right -->
+    <path android:fillColor="#555555"
+        android:pathData="M307,232h30v4h-30z"/>
+    <!-- Streetlight glow right -->
+    <path android:fillColor="#FFD700" android:alpha="0.9"
+        android:pathData="M312,218m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0"/>
+    <path android:fillColor="#FFD700" android:alpha="0.2"
+        android:pathData="M312,218m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0"/>
+
+    <!-- Dark overlay gradient at bottom for card readability -->
+    <path android:fillColor="#0A1628" android:alpha="0.6"
+        android:pathData="M0,380h400v320H0z"/>
+
+</vector>

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F8">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="90dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ── HEADER ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#0F2D5A"
+                android:elevation="6dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="48dp"
+                android:paddingBottom="20dp">
+
+                <!-- Top row: avatar + name + logout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <!-- Avatar -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        app:cardCornerRadius="22dp"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardElevation="0dp"
+                        android:layout_marginEnd="12dp">
+                        <TextView
+                            android:id="@+id/tvAvatar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="D"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#1A5CA8"
+                            android:gravity="center"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Name and greeting -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Good Day 👋"
+                            android:textSize="11sp"
+                            android:textColor="#7AADDA"/>
+
+                        <TextView
+                            android:id="@+id/tvWelcome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Darshan"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"/>
+                    </LinearLayout>
+
+                    <!-- Profile tap area on avatar -->
+                    <ImageButton
+                        android:id="@+id/btnProfile"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_person"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        app:tint="#FFFFFF"
+                        android:contentDescription="Profile" />
+                    <!-- Logout button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnLogout"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="Logout"
+                        android:textSize="11sp"
+                        android:textColor="#FFFFFF"
+                        android:minWidth="0dp"
+                        android:paddingHorizontal="12dp"
+                        app:strokeColor="#FFFFFF"
+                        app:cornerRadius="18dp"/>
+                </LinearLayout>
+
+                <!-- Stats row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Total -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="14dp"
+                        app:cardBackgroundColor="#1A3A6C"
+                        app:cardElevation="0dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📋"
+                                android:textSize="20sp"
+                                android:layout_marginBottom="4dp"/>
+                            <TextView
+                                android:id="@+id/tvTotalReports"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total"
+                                android:textSize="10sp"
+                                android:textColor="#7AADDA"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Potholes -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="14dp"
+                        app:cardBackgroundColor="#1A3A6C"
+                        app:cardElevation="0dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🕳"
+                                android:textSize="20sp"
+                                android:layout_marginBottom="4dp"/>
+                            <TextView
+                                android:id="@+id/tvPotholes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Potholes"
+                                android:textSize="10sp"
+                                android:textColor="#7AADDA"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Streetlights -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="14dp"
+                        app:cardBackgroundColor="#1A3A6C"
+                        app:cardElevation="0dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="💡"
+                                android:textSize="20sp"
+                                android:layout_marginBottom="4dp"/>
+                            <TextView
+                                android:id="@+id/tvStreetlights"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lights"
+                                android:textSize="10sp"
+                                android:textColor="#7AADDA"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ── TRACK BUTTON ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="4dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTrack"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="🎫   Track My Report by Ticket ID"
+                    android:textSize="13sp"
+                    android:textColor="#1A5CA8"
+                    app:strokeColor="#1A5CA8"
+                    app:cornerRadius="14dp"/>
+            </LinearLayout>
+
+            <!-- ── FILTER CHIPS ── -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="4dp">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:selectionRequired="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipAll"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="All"
+                        android:checked="true"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipPothole"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🕳 Pothole"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipStreetlight"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💡 Streetlight"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipHigh"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔴 High"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipMedium"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🟡 Medium"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipLow"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🟢 Low"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipResolved"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="✅ Resolved"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipOther"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📢 Other"/>
+
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+
+            <!-- ── MY REPORTS HEADER ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="My Reports"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A2E"/>
+
+                <TextView
+                    android:id="@+id/tvReportCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 total"
+                    android:textSize="12sp"
+                    android:textColor="#888888"/>
+            </LinearLayout>
+
+            <!-- ── EMPTY STATE ── -->
+            <LinearLayout
+                android:id="@+id/layoutEmptyState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingVertical="56dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🛣️"
+                    android:textSize="56sp"
+                    android:layout_marginBottom="14dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No reports yet"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A2E"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/tvEmptyState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap the + button to report your first issue!"
+                    android:textSize="13sp"
+                    android:textColor="#888888"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- ── REPORTS LIST ── -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="100dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- ── FAB ── -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:text="Report Issue"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:icon="@drawable/ic_camera"
+        app:iconTint="#FFFFFF"
+        app:backgroundTint="#1A5CA8"
+        app:cornerRadius="16dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
